@@ -6,12 +6,12 @@ angular.module('app')
                 username: 'anthonyprograms',
                 score: $scope.scores
             }).success(function (post) {
-                $scope.postBody = null
+                console.log('success')
             })
         }
     }
 
-    PostsSvc.fetch().success(function (scores) {
+    ScoresSvc.fetch().success(function (scores) {
         $scope.scores = scores
     })
 })
