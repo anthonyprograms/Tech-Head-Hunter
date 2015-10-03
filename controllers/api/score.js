@@ -18,7 +18,7 @@ router.put('/api/scores', function (req, res, next) {
 
 router.post('/api/scores', function (req, res, next) {
     var score = new Score({points: req.body.score})
-    //score.username = req.auth.username
+    score.username = req.auth.username
     score.save(function (err, s) {
         if (err) { return next(err) }
         res.status(201).json(s)
