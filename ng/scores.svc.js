@@ -1,9 +1,9 @@
 angular.module('app')
-.service('PostsSvc', function ($http) {
+.service('ScoresSvc', function ($http) {
     this.fetch = function () {
-        return $http.get('/api/posts')
+        return $http.get('/api/scores')
     }
-    this.create = function (post) {
-        return $http.post('/api/posts', post)
+    this.create = function (score) {
+        return $http.post('/api/scores', score)
     }
 })
