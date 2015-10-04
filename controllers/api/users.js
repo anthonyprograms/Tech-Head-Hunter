@@ -17,14 +17,16 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
     var user = new User({username: req.body.username});
-    bcrypt.hash(req.body.password, 10, function (err, hash) {
-        if (err) { return next(err) }
-        user.password = hash;
-        user.save(function (err) {
-            if (err) { return next(err) }
+    //bcrypt.hash(req.body.password, 10, function (err, hash) {
+        //if (err) { return next(err) }
+        //user.password = hash;
+        user.password = req.body.password
+        user.save(function (err, data) {
+            if (err) { return console.log(err) }
             res.sendStatus(201)
+            console.log(data);
         })
-    })
+    //})
 })
 
 module.exports = router;
