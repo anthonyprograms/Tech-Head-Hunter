@@ -1,10 +1,8 @@
 <div class='container' id='posts-container'>
-    <h1>Player Scores</h1>
+    <h1>Leaderboard</h1>
     <ul class='list-group'>
-        <p>Username    Points</p>
         <li ng-repeat="score in scores | orderBy: '-date'" class='list-group-item'>
-            <strong>Name: {{ username }}</strong>
-            <span> Score: {{ points }}</span>
+            <strong>{{ score.username }}</strong> {{ score.points }}
         </li>
     </ul>
 </div>

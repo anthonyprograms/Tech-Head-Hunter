@@ -12,7 +12,6 @@ angular.module('app')
     }
 
     ScoresSvc.fetch().success(function (score) {
-        //console.log(score)
         $scope.scores = score
     })
 })
