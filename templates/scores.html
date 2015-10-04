@@ -1,16 +1,10 @@
 <div class='container' id='posts-container'>
     <h1>Player Scores</h1>
-    <form role='form'>
-        <div class='form-group'>
-            <div class='input-group'>
-                <input ng-model='postBody' class='form-control' />
-            </div>
-        </div>
-    </form>
     <ul class='list-group'>
-        <li ng-repeat="score in scores | orderBy: 'score'" class='list-group-item'>
-        <strong><a ng-click='memberPosts(post.username)'>@{{ score.username }}</a></strong>
-            <span>{{ score.score }}</span>
+        <p>Username    Points</p>
+        <li ng-repeat="score in scores | orderBy: '-date'" class='list-group-item'>
+            <strong>Name: {{ username }}</strong>
+            <span> Score: {{ points }}</span>
         </li>
     </ul>
 </div>

@@ -3,8 +3,9 @@ var router = require('express').Router()
 
 router.get('/api/scores', function (req, res, next) {
     Score.find()
-    .sort('score')
+    //.sort('score')
     .exec(function(err, scores) {
+        console.log('asfd',scores)
         if (err) { return next(err) }
         res.json(scores)
     })
