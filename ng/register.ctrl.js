@@ -6,8 +6,7 @@ angular.module('app')
             .then(function (user) {
                 UserSvc.login(username, password)
                 .then(function (response) {
-                    //$scope.$emit('login', response.data)
-                    $scope.$emit('login', username)
+                    $scope.$emit('login', response.data)
                     $location.path('/')
                 })
             })

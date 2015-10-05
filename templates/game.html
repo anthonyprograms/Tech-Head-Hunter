@@ -3,20 +3,22 @@
 
 <div class='container'>
   <!-- below for game to be running in -->
-  <object id="UnityObject"
-              classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
-              width="800"
-              height="450"
-              codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
-         <param name="Builds.unity3d"
-                value="Builds.unity3d" />
-             <embed id="UnityEmbed"
-                    src="Unity_files/Builds.unity3d"
-                    width="600"
-                    height="450"
-                    type="application/vnd.unity"
-                    pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
-    </object>
+  <p class="header"><span>Unity Web Player | </span>TechHeadHunter</p>
+    <div class="content">
+      <div id="unityPlayer">
+        <div class="missing">
+          <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+            <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+          </a>
+        </div>
+        <div class="broken">
+          <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+            <img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
   <div class="panel panel-primary">
   </div>
 <!-- below for game controls inside a panel-->
