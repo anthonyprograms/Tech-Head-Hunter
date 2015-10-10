@@ -6,14 +6,11 @@ var config = require('../../config')
 
 router.get('/', function (req, res, next) {
     if (!req.headers['x-auth']) {
-        console.log('!req.header')
         return res.sendStatus(401);
     }
     var auth = jwt.decode(req.headers['x-auth'], config.secret)
-    console.log('auth',auth)
     User.findOne({username: auth.username}, function (err, user) {
         if(err) { return next(err) }
-        console.log('user found')
         res.json(user);
     })
 })

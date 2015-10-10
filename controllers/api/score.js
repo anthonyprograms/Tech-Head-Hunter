@@ -4,7 +4,6 @@ var router = require('express').Router()
 router.get('/', function (req, res, next) {
     Score.find().sort({points: -1})
     .exec(function(err, scores) {
-        console.log('asdf',scores)
         if (err) { return next(err) }
         res.json(scores)
     })
